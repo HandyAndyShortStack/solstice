@@ -1,0 +1,74 @@
+{
+  "studios": [
+    {
+      "name": "Seattle Fremont Studio",
+      "lat": 47.649085,
+      "lon": -122.348158
+    },
+    {
+      "name": "Pioneer Square Studio",
+      "lat": 47.598570,
+      "lon": -122.333800
+    },
+    {
+      "name": "Denver",
+      "lat": 39.749902,
+      "lon": -104.998871
+    },
+    {
+      "name": "Washington D.C.",
+      "lat": 38.897681,
+      "lon": -77.070522
+    },
+    {
+      "name": "Melbourne",
+      "lat": -37.815717,
+      "lon": 144.957161
+    },
+    {
+      "name": "sydney",
+      "lat": -33.862888,
+      "lon": 151.207366
+    },
+    {
+      "name": "adelaide",
+      "lat": -34.925938,
+      "lon": 138.598763
+    },
+    {
+      "name": "perth",
+      "lat": -31.952674,
+      "lon": 115.851830
+    },
+    {
+      "name": "toronto",
+      "lat": 43.644021,
+      "lon": -79.394552
+    },
+    {
+      "name": "london",
+      "lat": 51.515392,
+      "lon": -0.105597
+    },
+    {
+      "name": "mumbai",
+      "lat": 19.075984,
+      "lon": 72.877656
+    },
+    {
+      "name": "tokyo",
+      "lat": 35.681183,
+      "lon": 139.763770
+    },
+    {
+      "name": "johannesburg",
+      "lat": -26.060800,
+      "lon": 28.085450
+    },
+    {
+      "name": "stellenbosch",
+      "lat": -33.939344,
+      "lon": 18.858045
+    },
+  ]
+}
