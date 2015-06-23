@@ -8,13 +8,20 @@
     "stylus": "latest",
     "parallelshell": "latest",
     "node-static": "latest",
-    "cowsay": "latest"
+    "cowsay": "latest",
+    "browserify": "latest",
+    "suncalc": "latest"
+  },
+  "browserifiedModules": {
+    "suncalc": "suncalc"
   },
   "scripts": {
+    "build:browserify": "browserify scripts/modules.js -o build/js/node_bundle.js",
     "watch:coffee": "coffee -o build/js/ -cw coffee/",
     "watch:jade": "jade --watch jade/ --out build/",
     "watch:stylus": "stylus --watch stylus/ --out build/styles",
-    "watch": "parallelshell 'npm run watch:coffee' 'npm run watch:jade' 'npm run watch:stylus'",
+    "watch:browserify": "node scripts/browserify_modules.js",    
+    "watch": "parallelshell 'npm run watch:coffee' 'npm run watch:jade' 'npm run watch:stylus' 'npm run watch:browserify'",
     "server": "node server.js",
     "dev": "parallelshell 'npm run watch' 'npm run server'"
   },

@@ -1,0 +1,25 @@
+html,
+body {
+  width: 100%;
+}
+section.chart {
+  width: 100%;
+  background-color: #f0ffff;
+}
+body {
+  font: 10px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+.x.axis path {
+  display: none;
+}
+.line {
+  fill: none;
+  stroke: #4682b4;
+  stroke-width: 1.5px;
+}
