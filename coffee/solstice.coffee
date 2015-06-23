@@ -127,9 +127,10 @@ line = d3.svg.line()
 
 colors = d3.scale.category20()
 
-svg = d3.select('section.chart').append('svg')
-    .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top + margin.bottom)
+totalWidth = width + margin.left + margin.right
+totalHeight = height + margin.top + margin.bottom
+svg = d3.select('.chart').append('svg')
+    .attr('viewBox', '0 0 ' + totalWidth + ' ' + totalHeight)
   .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
 

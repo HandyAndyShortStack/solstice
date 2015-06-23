@@ -15,3 +15,27 @@ body {
   stroke: #4682b4;
   stroke-width: 1.5px;
 }
+section.daylight-viz {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+section.daylight-viz > .studio-list {
+  flex: 1;
+}
+section.daylight-viz > .chart {
+  flex: 2;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+section.daylight-viz > .chart > svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
