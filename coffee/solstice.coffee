@@ -12,7 +12,7 @@ studios = [
   {
     "name": "Denver",
     "lat": 39.749902,
-    "lon": -120 # actually -104.998871, shifted to account for daylight savings bug
+    "lon": -104.5 # actually -104.998871, shifted to avoid daylight savings bug
   },
   {
     "name": "Washington D.C.",
@@ -125,6 +125,8 @@ line = d3.svg.line()
     .y (d) ->
       y(d.dayLength)
 
+colors = d3.scale.category20()
+
 svg = d3.select('section.chart').append('svg')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
@@ -143,8 +145,11 @@ svg.append('g')
     .attr('class', 'y axis')
     .call(yAxis)
 
-for studio in studios
-  svg.append('path')
+for studio, index in studios
+  svg.append('g')
+      .attr('data-studio-name', studio.name)
+    .append('path')
       .datum(studio.dayLengths)
       .attr('class', 'line')
       .attr('d', line)
+      .style('stroke', colors(index))
