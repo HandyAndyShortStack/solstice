@@ -130,6 +130,7 @@ colors = d3.scale.category20()
 totalWidth = width + margin.left + margin.right
 totalHeight = height + margin.top + margin.bottom
 svg = d3.select('.chart').append('svg')
+    .attr('id', 'day-length-chart')
     .attr('viewBox', '0 0 ' + totalWidth + ' ' + totalHeight)
   .append('g')
     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
@@ -148,9 +149,25 @@ svg.append('g')
 
 for studio, index in studios
   svg.append('g')
+      .attr('class', 'studio-line')
       .attr('data-studio-name', studio.name)
     .append('path')
       .datum(studio.dayLengths)
       .attr('class', 'line')
       .attr('d', line)
       .style('stroke', colors(index))
+
+# behavior for studio label mouseover
+
+
+for studioLabel in document.querySelectorAll('.studio-label')
+  
+  studioLabel.addEventListener 'mouseover', (event) ->
+    studioName = @getAttribute 'data-studio-name'
+    document.querySelector('#day-length-chart').classList.add 'studio-highlighted'
+    d3.selectAll('.studio-line').classed 'highlighted', false
+    d3.select("g[data-studio-name='#{studioName}']").classed 'highlighted', true
+
+  studioLabel.addEventListener 'mouseout', (event) ->
+    document.querySelector('#day-length-chart').classList.remove 'studio-highlighted'
+    d3.selectAll('.studio-line').classed 'highlighted', false

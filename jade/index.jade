@@ -4,7 +4,37 @@ html
     script(src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js")
     script(src="/js/node_bundle.js")
   body
-    section.daylight-viz
-      .studio-list
-      .chart
+    .content-wrapper
+      section.daylight-viz
+        .studio-list
+          ul
+            li.studio-label(data-studio-name="Seattle Fremont Studio")
+              .checkbox Seattle Fremont Studio
+            li.studio-label(data-studio-name="Pioneer Square Studio")
+              .checkbox Pioneer Square Studio
+            li.studio-label(data-studio-name="Denver")
+              .checkbox Denver
+            li.studio-label(data-studio-name="Washington D.C.")
+              .checkbox Washington D.C.
+            li.studio-label(data-studio-name="Melbourne")
+              .checkbox Melbourne
+            li.studio-label(data-studio-name="Sydney")
+              .checkbox Sydney
+            li.studio-label(data-studio-name="Adelaide")
+              .checkbox Adelaide
+            li.studio-label(data-studio-name="Perth")
+              .checkbox Perth
+            li.studio-label(data-studio-name="Toronto")
+              .checkbox Toronto
+            li.studio-label(data-studio-name="London")
+              .checkbox London
+            li.studio-label(data-studio-name="Mumbai")
+              .checkbox Mumbai
+            li.studio-label(data-studio-name="Tokyo")
+              .checkbox Tokyo
+            li.studio-label(data-studio-name="Johannesburg")
+              .checkbox Johannesburg
+            li.studio-label(data-studio-name="Stellenbosch")
+              .checkbox Stellenbosch
+        .chart
     script(src="/js/solstice.js")
